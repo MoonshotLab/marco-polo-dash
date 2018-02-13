@@ -11,6 +11,9 @@
     "mongodb": "2"
   },
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "start-server": "npm run start",
+    "start-client": "cd client && npm run start",
+    "dev": "npm-run-all --parallel start-server start-client"
   }
 }
