@@ -13,6 +13,18 @@ router.post('/lyrebird/utterance', (req, res) => {
   }
 });
 
+router.get('/lyrebird/utterance', (req, res) => {
+  db
+    .asyncGetAllLyrebirdUtterances()
+    .then(utterances => {
+      res.json(utterances);
+    })
+    .catch(e => {
+      console.log(e);
+      res.status(500).send(e);
+    });
+});
+
 router.post('/sal/reaction', (req, res) => {
   if (!!req.body && req.headers.authorization === process.env.SECRET) {
     db.logSalReaction(req.body);

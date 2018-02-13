@@ -15,5 +15,8 @@
     "start-server": "npm run start",
     "start-client": "cd client && npm run start",
     "dev": "npm-run-all --parallel start-server start-client"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.2"
   }
 }
