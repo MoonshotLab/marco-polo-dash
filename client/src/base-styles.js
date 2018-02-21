@@ -1,6 +1,7 @@
 import { injectGlobal } from 'styled-components';
 import normalize from 'styled-normalize';
 import skeleton from 'styled-skeleton';
+import 'react-table/react-table.css';
 
 export default () => {
   injectGlobal`

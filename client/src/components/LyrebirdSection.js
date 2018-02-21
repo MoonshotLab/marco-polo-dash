@@ -7,6 +7,15 @@ import LyrebirdUtterancesTable from './LyrebirdUtterancesTable';
 
 const StyledLyrebirdSection = styled.section``;
 
+const StyledButtonList = styled.ul`
+  list-style: none;
+`;
+
+const StyledButtonListItem = styled.li`
+  display: inline-block;
+  margin-right: 1em;
+`;
+
 function getAllUtterances() {
   return fetch('/log/lyrebird/utterance').then(res => res.json());
 }
@@ -16,7 +25,8 @@ class LyrebirdSection extends React.Component {
     super();
 
     this.state = {
-      utterances: []
+      utterances: [],
+      currentChart: 'all'
     };
   }
 
@@ -36,13 +46,35 @@ class LyrebirdSection extends React.Component {
       });
   }
 
+  switchChartMode(e, newChart = 'all') {
+    e.preventDefault();
+
+    this.setState({
+      currentChart: newChart
+    });
+  }
+
   render() {
     return (
       <StyledLyrebirdSection>
         <HiddenAnchor id="lyrebird" />
-        <h2>LyrebirdSection</h2>
+        <h2>Lyrebird</h2>
+        <StyledButtonList>
+          <StyledButtonListItem>
+            <button onClick={e => this.switchChartMode(e, 'all')}>All</button>
+          </StyledButtonListItem>
+          <StyledButtonListItem>
+            <button onClick={e => this.switchChartMode(e, 'freq')}>
+              By Frequency
+            </button>
+          </StyledButtonListItem>
+        </StyledButtonList>
+
         {this.state.utterances && (
-          <LyrebirdUtterancesTable utterances={this.state.utterances} />
+          <LyrebirdUtterancesTable
+            utterances={this.state.utterances}
+            currentChart={this.state.currentChart}
+          />
         )}
       </StyledLyrebirdSection>
     );

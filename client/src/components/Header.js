@@ -7,6 +7,8 @@ const StyledHeader = styled.header`
   top: 0;
   left: 0;
   height: 60px;
+  background: white;
+  z-index: 5;
 `;
 const StyledNav = styled.nav`
   border-bottom: 2px solid #ddd;

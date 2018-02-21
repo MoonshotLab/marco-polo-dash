@@ -8,7 +8,10 @@
     "body-parser": "^1.18.2",
     "dotenv": "^5.0.0",
     "express": "^4.16.2",
-    "mongodb": "2"
+    "lodash": "^4.17.5",
+    "moment": "^2.20.1",
+    "mongodb": "2",
+    "react-table": "^6.7.6"
   },
   "scripts": {
     "start": "node app.js",
