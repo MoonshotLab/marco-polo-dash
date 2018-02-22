@@ -18,6 +18,7 @@ const getUniqueUtterancesByFrequency = (utterances = []) => {
     }
 
     utteranceFrequencies[lowerCase(utteranceObj.utterance)].frequency++;
+    return true;
   });
 
   // sort before returning an array
