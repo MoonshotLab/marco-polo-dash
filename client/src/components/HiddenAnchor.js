@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledAnchor = styled.div`
-  padding-top: 2em;
+  padding-top: 60px;
 `;
 
 class HiddenAnchor extends React.Component {

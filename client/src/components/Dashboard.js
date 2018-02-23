@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import LyrebirdSection from './LyrebirdSection';
 // import MitsukuSection from './MitsukuSection';
-// import SALSection from './SALSection';
+import SALSection from './SALSection';
 // import DeviceBuffetSection from './DeviceBuffetSection';
 // import CasebotSection from './CasebotSection';
 
@@ -15,10 +15,10 @@ class Dashboard extends React.Component {
       <StyledDashboard>
         <h1>Dashboard</h1>
         <LyrebirdSection />
-        {/* <MitsukuSection />
+        {/* <MitsukuSection /> */}
         <SALSection />
-        <DeviceBuffetSection />
-        <CasebotSection /> */}
+        {/* <DeviceBuffetSection /> */}
+        {/* <CasebotSection /> */}
       </StyledDashboard>
     );
   }

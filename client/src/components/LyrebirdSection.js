@@ -4,21 +4,13 @@ import fetch from 'node-fetch';
 
 import HiddenAnchor from './HiddenAnchor';
 import LyrebirdUtterancesTable from './LyrebirdUtterancesTable';
+import { StyledButtonList, StyledButtonListItem } from './SharedUI';
 
 const StyledLyrebirdSection = styled.section``;
 
-const StyledButtonList = styled.ul`
-  list-style: none;
-`;
-
-const StyledButtonListItem = styled.li`
-  display: inline-block;
-  margin-right: 1em;
-`;
-
-function getAllUtterances() {
+const getAllUtterances = () => {
   return fetch('/log/lyrebird/utterance').then(res => res.json());
-}
+};
 
 class LyrebirdSection extends React.Component {
   constructor() {

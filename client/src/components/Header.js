@@ -33,10 +33,10 @@ class Header extends React.Component {
         <StyledNav>
           <div className="container">
             <StyledNavItem href="#lyrebird">Lyrebird</StyledNavItem>
-            {/* <StyledNavItem href="#mitsuku">Mitsuku</StyledNavItem>
+            {/* <StyledNavItem href="#mitsuku">Mitsuku</StyledNavItem> */}
             <StyledNavItem href="#sal">S.A.L.</StyledNavItem>
-            <StyledNavItem href="#device-buffet">Device Buffet</StyledNavItem>
-            <StyledNavItem href="#casebot">Casebot</StyledNavItem> */}
+            {/* <StyledNavItem href="#device-buffet">Device Buffet</StyledNavItem> */}
+            {/* <StyledNavItem href="#casebot">Casebot</StyledNavItem> */}
           </div>
         </StyledNav>
       </StyledHeader>

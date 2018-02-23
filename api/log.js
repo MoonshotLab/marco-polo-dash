@@ -35,6 +35,18 @@ router.post('/sal/reaction', (req, res) => {
   }
 });
 
+router.get('/sal/reaction', (req, res) => {
+  db
+    .asyncGetAllSalReactions()
+    .then(reactions => {
+      res.json(reactions);
+    })
+    .catch(e => {
+      console.log(e);
+      res.status(500).send(e);
+    });
+});
+
 router.post('/', (req, res) => {
   res.sendStatus(200);
 });
